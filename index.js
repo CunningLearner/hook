@@ -45,7 +45,7 @@ restService.post('/hook', function (req, res) {
 
                 if (requestBody.result.fulfillment) {
 			if (requestBody.result.fulfillment.speech == "sensor"){
-				speech+='sensor value is '+sread;}
+				speech+= sread;}
 			else
 				speech += requestBody.result.fulfillment.speech;
 			//if (speech == "sensor"){
