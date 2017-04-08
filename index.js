@@ -60,7 +60,10 @@ restService.post('/hook', function (req, res) {
 		fs.readFile('test','utf8', function(err, contents) {
 					console.log("The content of the file"+contents);
 //});
+				
 		var sread = contents
+		if (speech == "sensor"){
+			speech+='sensor value is '+sread);}
         return res.json({
             speech: speech,
             displayText:sread,
