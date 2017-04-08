@@ -44,7 +44,12 @@ restService.post('/hook', function (req, res) {
                 speech = '';
 
                 if (requestBody.result.fulfillment) {
-                    speech += requestBody.result.fulfillment.speech;
+			if (requestBody.result.fulfillment.speech == "sensor"){
+				speech+='sensor value is '+sread);}
+			else
+				speech += requestBody.result.fulfillment.speech;
+			//if (speech == "sensor"){
+			//	speech+='sensor value is '+sread);}
                     speech += ' ';
                 }
 
@@ -62,8 +67,8 @@ restService.post('/hook', function (req, res) {
 //});
 				
 		var sread = contents
-		if (speech == "sensor"){
-			speech+='sensor value is '+sread);}
+		//if (speech == "sensor"){
+		//	speech+='sensor value is '+sread);}
         return res.json({
             speech: speech,
             displayText:sread,
