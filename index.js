@@ -66,7 +66,7 @@ restService.post('/hook', function (req, res) {
 //});
 				
 		var sread = contents
-		if (speech == "sensor"){
+		if (speech == "sensor "){
 			speech+=sread;}
         return res.json({
             speech: speech,
